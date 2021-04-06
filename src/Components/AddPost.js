@@ -10,7 +10,7 @@ var year = dateObj.getUTCFullYear();
 var monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var newdate;
 
-    newdate = day + " " + monthName[month] + " " + year;
+    newdate = day + " " + monthName[month - 1] + " " + year;
 
 
     return (

@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import './App.css';
 import AddPost from "./Components/AddPost";
 import Nav from './Components/Nav';
-import SinglePost from "./Components/SinglePost";
+import Axios from "axios";
+import AllPosts from "./Components/AllPosts";
 
 function App() {
 
@@ -15,7 +16,6 @@ function App() {
     Axios.get('http://localhost:3001/posts').then((response) => {
       setAllPosts(response.data);
     });
-    console.log(allPosts);
   }, []);
 
   return (
@@ -25,11 +25,9 @@ function App() {
       admin={admin}
       loginStatus={loginStatus}
     />
-    <div className="single-post-wrapper">
-        <SinglePost />
-    </div>
-
-
+    <AllPosts 
+        allPosts={allPosts}
+    />
     </div>
   );
 }

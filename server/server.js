@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const cors = require('cors');
 const app = express();
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 
 app.use(cors());
 
@@ -18,7 +21,7 @@ MongoClient.connect("mongodb+srv://matt:Burnley123@cluster0.z54br.mongodb.net/re
         app.get('/', (req, res) => {
 
         });
-        
+
         app.get('/posts', (req, res) => {
             db.collection("posts").find().toArray()
                 .then(results => {

@@ -1,11 +1,11 @@
 import '.././css/SinglePost.css';
 
-const SinglePost = () => {
+const SinglePost = ({ title, date, content, author, id }) => {
     return (
-        <div className="single-post">
-            <h2>Title</h2>
-            <p><small>Author: <b>Matt</b></small> <small>Posted: <b>6th April 2021</b></small></p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, quidem magni nihil qui corrupti obcaecati expedita eius quos odit explicabo.</p>
+        <div className="single-post" key={id}>
+            <h2>{title}</h2>
+            <p><small>Author: <b>{author}</b></small> <small>Posted: <b>{date}</b></small></p>
+            <p>{content}</p>
             <a href="#" className="btn">Read more</a>
         </div>
     );
