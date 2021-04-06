@@ -33,7 +33,7 @@ h1{
 }
 
 
-p, li, a{
+p, li, a, label, input, textarea, select, option{
     font-size: calc(var(--base-font-size) * 1.6);
     line-height: 1.5;
 }

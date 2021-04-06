@@ -1,0 +1,25 @@
+form{
+    flex-direction: column;
+    width: 500px;
+    padding: 2em 0;
+}
+form label, form input, form textarea, form select{
+    margin-bottom: 0.5em;
+}
+form input, form textarea, form select{
+    padding: 0.5em;
+}
+form textarea{
+    height: 150px;
+    resize: none;
+}
+input[type=submit]{
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+form h3{
+      font-size: calc(var(--base-font-size) * 2.25);
+      margin-bottom: 0.5em;
+}
