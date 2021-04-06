@@ -1,7 +1,9 @@
+import logo from ".././logo.svg"
+
 const Nav = ({ admin, loginStatus}) => {
     return (
         <nav className="flex flex_align-center flex_space-between">
-            <img src="logo" />
+            <img src={logo} />
             <ul className="flex">
                 <li><a href="">Blog posts</a></li>
                 {admin && <li><a href="">Admin</a></li>}

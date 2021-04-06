@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './App.css';
 import Nav from './Components/Nav';
+import SinglePost from "./Components/SinglePost";
 
 function App() {
 
@@ -12,9 +13,13 @@ function App() {
   return (
     <div className="App">
     <Nav 
-    admin={admin}
-        loginStatus={loginStatus}
+      admin={admin}
+      loginStatus={loginStatus}
     />
+    <div className="single-post-wrapper">
+        <SinglePost />
+    </div>
+
 
     </div>
   );
