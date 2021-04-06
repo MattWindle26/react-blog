@@ -1,18 +1,12 @@
 import './App.css';
+import Nav from './Components/Nav';
+
 
 function App() {
   return (
     <div className="App">
 
-      <h1>Blog</h1>
-
-      <nav>
-        <ul>
-          <li><a href="">Blog posts</a></li>
-          <li><a href="">Admin</a></li>
-        </ul>
-      </nav>
-
+    <Nav />
 
     </div>
   );
