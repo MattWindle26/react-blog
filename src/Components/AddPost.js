@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '.././css/AddPost.css';
 
 
@@ -12,12 +13,12 @@ var newdate;
 
     newdate = day + " " + monthName[month - 1] + " " + year;
 
-
+    const [postURL, setPostURL] = useState("");
     return (
         <form action="http://localhost:3001/add" className="flex" method="POST">
-            <h3>Add post</h3>
+            <h3>Add post {postURL}</h3>
             <label htmlFor="">Title</label>
-            <input type="text" name="title" />
+            <input type="text" name="title" onChange={(e) => setPostURL(e.target.value.replaceAll(' ', '-').toLowerCase())} />
             <label htmlFor="">Content (HTML Allowed)</label>
             <textarea name="content"></textarea>
             <label htmlFor="">Short Description</label>
@@ -28,6 +29,7 @@ var newdate;
                 <option value="Matt">Matt</option>
             </select>
             <input type="hidden" name="data" value={newdate} />
+            <input type="hidden" name="posturl" value={postURL} />
             <input type="submit" value="Add Post" />
         </form>
     );

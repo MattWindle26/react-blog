@@ -16,6 +16,7 @@ const AllPosts = ({ allPosts }) => {
                             date={data.data}
                             content={data.content}
                             shortdesc={data.shortdesc}
+                            postURL={data.posturl}
                         />
                     </>
                 )

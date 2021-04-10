@@ -6,7 +6,7 @@ const SinglePost = ({ title, date, content, shortdesc, author, id, postURL }) =>
             <h2>{title}</h2>
             <p><small>Author: <b>{author}</b></small> <small>Posted: <b>{date}</b></small></p>
             <p>{shortdesc}</p>
-            <a href="#" className="btn">Read more</a>
+            <a href={postURL} className="btn">Read more</a>
         </div>
     );
 }
