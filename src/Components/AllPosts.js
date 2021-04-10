@@ -9,13 +9,13 @@ const AllPosts = ({ allPosts }) => {
             {allPosts.map((data) => {
                 return (
                     <>
-                       
                         <SinglePost 
                             id={data._id}
                             title={data.title}
                             author={data.author}
                             date={data.data}
                             content={data.content}
+                            shortdesc={data.shortdesc}
                         />
                     </>
                 )

@@ -18,8 +18,10 @@ var newdate;
             <h3>Add post</h3>
             <label htmlFor="">Title</label>
             <input type="text" name="title" />
-            <label htmlFor="">Content</label>
+            <label htmlFor="">Content (HTML Allowed)</label>
             <textarea name="content"></textarea>
+            <label htmlFor="">Short Description</label>
+            <textarea name="shortdesc"></textarea>
             <label htmlFor="">Author</label>
             <select name="author">
                 <option >Choose author</option>
