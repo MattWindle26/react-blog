@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import './App.css';
-import AddPost from "./Components/AddPost";
 import Nav from './Components/Nav';
-import Axios from "axios";
+import AddPost from "./Components/AddPost";
 import AllPosts from "./Components/AllPosts";
+import Axios from "axios";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
 
-  const [admin, setAdmin] = useState(false);
-  const [loginStatus, setLoginStatus] = useState(false);
-  const [allPosts, setAllPosts] = useState([])
+  const [admin, setAdmin] = useState(true);
+  const [loginStatus, setLoginStatus] = useState(true);
+  const [allPosts, setAllPosts] = useState([]);
 
 
   useEffect(() => {
@@ -19,16 +20,25 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <AddPost />
-    <Nav 
-      admin={admin}
-      loginStatus={loginStatus}
-    />
-    <AllPosts 
-        allPosts={allPosts}
-    />
-    </div>
+    <Router>
+      <div className="App">
+      <Nav 
+        admin={admin}
+        loginStatus={loginStatus}
+      />
+      <Switch>
+        <Route exact path="/" > 
+            <AllPosts
+              allPosts={allPosts}
+            />
+        </Route>
+        <Route path="/newpost" > 
+          <AddPost />
+        </Route>
+      </Switch>
+
+      </div>
+    </Router>
   );
 }
 
