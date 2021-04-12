@@ -36,7 +36,7 @@ MongoClient.connect("mongodb+srv://matt:Burnley123@cluster0.z54br.mongodb.net/re
                     res.redirect('http://localhost:3000/')
                 })
         });
-
+        
         app.listen(3001, () => {
             console.log("listening on port 3001");
         })
